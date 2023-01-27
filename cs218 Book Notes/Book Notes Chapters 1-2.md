@@ -51,3 +51,45 @@
 			- used to show CPU status
 		- XMM Registers 
 			- Used to support 64bit and 32 bit floating points
+
+#### Cache Memory
+	- Small Subset of primary RAM located in the CPU
+	- if memory is accessed, a copy is placed into cache
+	- This is done so subsequent queries are faster
+	- Usually a memory address is accessed via bus 
+	- However if stored in cache it can be accessed directly rather then over bus
+	- Cache hit = data in cache
+	- cahce miss = data not in cache
+	- More requests in cachce means faster system overall.
+
+#### Main Memory
+	- Series of bytes one after another
+	- is byte addressable, this means each memory address holds one byte of info
+		- To hold a double-word 4 bytes are used, which means 4 mem addresses are used
+	- Important to note!
+		- Architecture is Little-Endian
+		- This equates as, LEAST significant byte is stored at lowest mem address
+		- Most Significant Byte is stored at highest memory address!
+		- This can be viewed well on page 16!
+
+#### Memory Layout
+	- High Memory
+		- Stack -> Starts in high memory and moves downward 
+			- Heap -> Dynamically allocated data is stored here ( if requested )
+		- BSS - Uninitialized data -> Declared vars that have not been provided an initial value are stored here
+		- data -> Initialized Data stored here
+		- text (code) -> Where machine language is stored
+	- Low Memory 
+		- reserved -> Not available to user programs
+
+#### Memory Hierarchy
+	- Generally: Fast memory is more expensive then slow memory
+	- Registers are small, fast, and expensive 
+	- Secondary storage such as disk or SSD are larger, slower, and less expensive
+	- Idea is to balanace performance with cost
+		- Heirarchy:
+			- CPU Registers -> ~ 1 nanoseconds
+			- Cache -> ~ 6-50 nanoseconds
+			- Primary Storage (RAM) -> ~100-150 nanoseconds
+			- Secondary Storage (ssd) -> 3-15 milliseconds
+			- Tertiary Storage ( remote storage, optical backups)
