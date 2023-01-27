@@ -59,6 +59,7 @@ Most examples in hardware use 8 bits, so data is usually shown in 8 bits.
 ### Hex
 	Base 16 numbering system. 
 	1-10 + A B C D E F. A-F is used to represent digits past 9. A = 10, B = 11.... etc etc. 
+	Each hex is 4 bits of binary.
 
 #### Integers
 	- Whole numbers only, no fractions
@@ -119,4 +120,12 @@ Most examples in hardware use 8 bits, so data is usually shown in 8 bits.
 		Determine bias exponent
 		Write in binary
 		convert to hex
+		located on pg 26 of text.
+		
+
+
+
+## Ast02
+	-Data on PDF or Text File
+	-Data goes in data section, code in text section
 	
